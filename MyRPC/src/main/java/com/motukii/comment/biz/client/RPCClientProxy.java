@@ -10,12 +10,12 @@ import java.lang.reflect.Proxy;
 
 /**
  * @author: 陈宇航
- * @CreateTime: 2025-03-12
+ * @CreateTime: 2025-03-13
  * @Description:
  */
 
 @AllArgsConstructor
-public class ClientProxy implements InvocationHandler {
+public class RPCClientProxy implements InvocationHandler {
     // 传入参数Service接口的class对象，反射封装成一个request
     private String host;
     private int port;
@@ -38,4 +38,3 @@ public class ClientProxy implements InvocationHandler {
         return (T)o;
     }
 }
-
